@@ -1,0 +1,68 @@
+/* Paleta del grupo — idéntica a manim/tema.py */
+:root {
+  --rosa-claro: #FFCEE4;
+  --rosa: #FB90B7;
+  --magenta: #D01257;
+  --navy: #0F1021;
+  --navy-2: #1A1C36;
+  --grilla: #2B2D4D;
+  --gris-rosado: #B9A2B4;
+  --menta: #47D19F;
+  --ambar: #FFC857;
+
+  --slidev-theme-primary: var(--magenta);
+  --slidev-slide-container-background: var(--navy);
+}
+
+html.dark { color-scheme: dark; }
+
+/* Fondo y texto base: mismo navy que los videos de Manim, así el video se funde con la slide */
+.slidev-layout {
+  background: var(--navy);
+  color: var(--rosa-claro);
+  font-size: 1.05em;
+  line-height: 1.5;
+}
+
+.slidev-layout h1 {
+  color: var(--rosa);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.6em;
+}
+.slidev-layout h2 { color: var(--rosa); font-weight: 700; }
+.slidev-layout h3 { color: var(--rosa-claro); font-weight: 700; }
+.slidev-layout a { color: var(--menta); border-bottom: none; }
+.slidev-layout strong { color: var(--rosa); }
+.slidev-layout blockquote {
+  border-left: 4px solid var(--magenta);
+  background: var(--navy-2);
+  color: var(--rosa-claro);
+}
+
+/* Fórmulas (KaTeX) */
+.katex { color: var(--rosa-claro); font-size: 1.12em; }
+
+/* Código */
+.slidev-layout pre, .slidev-code-wrapper, .slidev-code {
+  background: var(--navy-2) !important;
+}
+
+/* Tablas */
+.slidev-layout table { border-color: var(--grilla); }
+.slidev-layout th { color: var(--rosa); border-bottom: 2px solid var(--magenta); }
+.slidev-layout td { border-color: var(--grilla); }
+
+/* Utilidades de color semántico (mismo significado que en Manim) */
+.f   { color: var(--rosa); }      /* f(x) */
+.f1  { color: var(--menta); }     /* f'(x), signo +, puntos críticos */
+.f2  { color: var(--ambar); }     /* f''(x), inflexión, contraejemplo */
+.neg { color: var(--magenta); }   /* signo −, asíntotas */
+.muted { color: var(--gris-rosado); }
+
+/* Video de Manim */
+.manim-video { display: block; border-radius: 12px; max-width: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+  .slidev-layout * { transition: none !important; animation: none !important; }
+}
